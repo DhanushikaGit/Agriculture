@@ -7,6 +7,14 @@
   <title>About - AgriCulture Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- AOS CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -26,6 +34,50 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+        /* Ensure visibility */
+        .about-3 h2,
+        .about-3 p,
+        .about-3 ul {
+            display: block !important;
+            visibility: visible !important;
+        }
+
+        /* Play Button Style */
+        .pulsating-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 0, 0, 0.7);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .pulsating-play-btn i {
+            font-size: 30px;
+            color: white;
+        }
+
+        /* CTA Button */
+        .btn-cta {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-cta:hover {
+            background-color: #218838;
+        }
+    </style>
 
   <!-- =======================================================
   * Template Name: AgriCulture
@@ -57,41 +109,43 @@
 
     <!-- About 3 Section -->
     <section id="about-3" class="about-3 section">
+        <div class="container">
+            <div class="row gy-4 justify-content-between align-items-center">
+                <!-- Image and Play Button -->
+                <div class="col-lg-6 order-lg-2 position-relative" data-aos="zoom-out">
+                    <img src="assets/img/img_sq_1.jpg" alt="Image" class="img-fluid">
+                    <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn">
+                        <span class="play"><i class="bi bi-play-fill"></i></span>
+                    </a>
+                </div>
 
-      <div class="container">
-        <div class="row gy-4 justify-content-between align-items-center">
-          <div class="col-lg-6 order-lg-2 position-relative" data-aos="zoom-out">
-            <img src="assets/img/img_sq_1.jpg" alt="Image" class="img-fluid">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn">
-              <span class="play"><i class="bi bi-play-fill"></i></span>
-            </a>
-          </div>
-          <div class="col-lg-5 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="content-title mb-4">VISION</h2>
-            <p class="mb-4">
-              To create a prosperous province with a satisfied and prosperous farming community.
-            </p>
-            <h2 class="content-title mb-4">MISSION</h2>
-            <p class="mb-4">
-              To develop food security, environmentally friendly agriculture, commercial agriculture and agribusiness through the use of new appropriate agricultural 
-              
-              technology and agricultural infrastructure, with the full cooperation and transparency of all stakeholders.
-            </p>
-            <h2 class="content-title mb-4">OBJECTIVES</h2>
-            <ul class="list-unstyled list-check">
-              <li>Popularizing new and appropriate agricultural technology in the North Central Province.</li>
-              <li>Promoting the production of quality seeds and planting materials.
-                Creating food security.</li>
-              <li>Promoting environmentally friendly agriculture.</li>
-              <li>Promoting commercial agriculture and agribusiness.</li>
-             
-            </ul>
+                <!-- Text Content -->
+                <div class="col-lg-5 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="content-title mb-4">VISION</h2>
+                    <p class="mb-4">
+                        To create a prosperous province with a satisfied and prosperous farming community.
+                    </p>
 
-            <p><a href="#" class="btn-cta">Get in touch</a></p>
-          </div>
+                    <h2 class="content-title mb-4">MISSION</h2>
+                    <p class="mb-4">
+                        To develop food security, environmentally friendly agriculture, commercial agriculture, and agribusiness through the use of 
+                        new appropriate agricultural technology and agricultural infrastructure, with the full cooperation and transparency of all stakeholders.
+                    </p>
+
+                    <h2 class="content-title mb-4">OBJECTIVES</h2>
+                    <ul class="list-unstyled list-check">
+                        <li>Popularizing new and appropriate agricultural technology in the North Central Province.</li>
+                        <li>Promoting the production of quality seeds and planting materials.</li>
+                        <li>Creating food security.</li>
+                        <li>Promoting environmentally friendly agriculture.</li>
+                        <li>Promoting commercial agriculture and agribusiness.</li>
+                    </ul>
+
+                    <p><a href="#" class="btn-cta">Get in touch</a></p>
+                </div>
+            </div>
         </div>
-      </div>
-    </section><!-- /About 3 Section -->
+    </section>
 
    <!-- Team Section -->
 <section class="team-15 team section" id="team">
@@ -201,8 +255,7 @@
                 <div class="service-item-content">
                   <h3 class="service-heading">Planting</h3>
                   <p>
-                    Gravida sodales condimentum pellen tesq accumsan orci quam
-                    sagittis sapie
+                    Planting is the initial and crucial step in agriculture. It involves sowing seeds or transplanting seedlings into the soil. This process requires careful planning and execution to ensure optimal growth conditions. Growing crops with care, ensuring healthy and sustainable produce.
                   </p>
                 </div>
               </div>
@@ -222,8 +275,7 @@
                 <div class="service-item-content">
                   <h3 class="service-heading">Mulching</h3>
                   <p>
-                    Gravida sodales condimentum pellen tesq accumsan orci quam
-                    sagittis sapie
+                    Mulching is the process of covering the soil with a protective layer of material to retain moisture, reduce soil erosion, and suppress weeds. It helps in maintaining soil temperature and improving soil health.
                   </p>
                 </div>
               </div>
@@ -243,8 +295,7 @@
                 <div class="service-item-content">
                   <h3 class="service-heading">Plowing</h3>
                   <p>
-                    Gravida sodales condimentum pellen tesq accumsan orci quam
-                    sagittis sapie
+                    Plowing is the process of turning over the upper layer of the soil, bringing fresh nutrients to the surface, while burying weeds and the remains of previous crops. This helps in aerating the soil and preparing it for sowing seeds, ensuring healthy and sustainable produce.
                   </p>
                 </div>
               </div>
@@ -262,8 +313,7 @@
                 <div class="service-item-content">
                   <h3 class="service-heading">Mowing</h3>
                   <p>
-                    Gravida sodales condimentum pellen tesq accumsan orci quam
-                    sagittis sapie
+                    Mowing is the process of cutting down grass and other plants to maintain a neat and tidy appearance. It helps in controlling weeds, promoting healthy growth, and ensuring a well-maintained landscape. Growing crops with care, ensuring healthy and sustainable produce.
                   </p>
                 </div>
               </div>
@@ -283,8 +333,7 @@
                 <div class="service-item-content">
                   <h3 class="service-heading">Seeding</h3>
                   <p>
-                    Gravida sodales condimentum pellen tesq accumsan orci quam
-                    sagittis sapie
+                    Seeding is the process of planting seeds in the soil to grow crops. It is a crucial step in agriculture that ensures the propagation of plants. Proper seeding techniques help in achieving optimal plant growth and yield.
                   </p>
                 </div>
               </div>
@@ -303,8 +352,7 @@
                 <div class="service-item-content">
                   <h3 class="service-heading">Fresh Vegetables</h3>
                   <p>
-                    Gravida sodales condimentum pellen tesq accumsan orci quam
-                    sagittis sapie
+                    We provide a variety of fresh vegetables grown with care and dedication. Our produce is harvested at the peak of ripeness to ensure maximum flavor and nutritional value. Enjoy the best of nature's bounty with our fresh vegetables.
                   </p>
                 </div>
               </div>
@@ -323,8 +371,7 @@
                 <div class="service-item-content">
                   <h3 class="service-heading">Watering</h3>
                   <p>
-                    Gravida sodales condimentum pellen tesq accumsan orci quam
-                    sagittis sapie
+                    Watering is essential for the growth and health of plants. It ensures that plants receive the necessary moisture to absorb nutrients from the soil, promoting strong root development and overall vitality. Proper watering techniques help in maintaining the right balance of moisture, preventing both under-watering and over-watering.
                   </p>
                 </div>
               </div>
@@ -342,10 +389,9 @@
                 </div>
                 <div class="service-item-content">
                   <h3 class="service-heading">Vegetable selling</h3>
-                  <p>
-                    Gravida sodales condimentum pellen tesq accumsan orci quam
-                    sagittis sapie
-                  </p>
+                    <p>
+                    Our vegetable selling service offers a wide variety of fresh, locally grown vegetables. We ensure that our produce is harvested at the peak of ripeness to provide you with the best quality and flavor. Whether you are looking for leafy greens, root vegetables, or seasonal specialties, we have something for everyone.
+                    </p>
                 </div>
               </div>
             </div>
@@ -391,8 +437,14 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

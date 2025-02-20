@@ -46,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,56 +53,88 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Department of Agriculture Services</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Add FontAwesome for icons -->
+
+    <!-- Favicons -->
+    <link href="assets/img/logoo-Recovered.bmp" rel="icon">
+    <link href="assets/img/logoo-Recovered.bmp" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="bg-gray-50">
     <?php include 'header.php'; ?>
 
-    <main class="container mx-auto px-4 py-8">
-        <!-- Header Section -->
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-green-800 mb-4">Contact Us</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto">Have questions about agricultural services? We're here to help! Reach out to us using any of the methods below.</p>
-        </div>
+   <!-- Page Title -->
+<div class="page-title dark-background relative text-center py-20 bg-cover bg-center text-white" 
+    style="background-image: url('assets/img/page-title-bg.webp');">
+    <div class="container mx-auto px-4">
+        <h1 class="text-5xl font-bold" data-aos="fade-up">Contact Us</h1>
+        <p class="text-lg mt-2">Home / Contact</p>
+        <nav class="breadcrumbs mt-3">
+            <ol class="flex justify-center space-x-2 text-gray-300">
+                <li><a href="index.html" class="hover:text-white">Home</a></li>
+                <li class="text-white">/</li>
+                <li class="current text-white">Contact</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- End Page Title -->
 
-        <!-- Contact Information Cards -->
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <!-- Address Card -->
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Contact Info Section -->
+        <div class="grid md:grid-cols-3 gap-8 my-12">
+            <!-- Address -->
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
                 <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i class="fas fa-map-marker-alt text-2xl text-green-600"></i>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Address</h3>
-                <p class="text-gray-600">A108 Adam Street, New York, NY 535022</p>
+                <p class="text-gray-600">Provincial Department of Agriculture, North Central Province, Anuradhapura</p>
             </div>
 
-            <!-- Email Card -->
+            <!-- Email -->
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
                 <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i class="fas fa-envelope text-2xl text-green-600"></i>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Email Us</h3>
-                <p class="text-gray-600">info@example.com</p>
+                <p class="text-gray-600">ncpagri@gmail.com</p>
             </div>
 
-            <!-- Phone Card -->
+            <!-- Phone -->
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
                 <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i class="fas fa-phone text-2xl text-green-600"></i>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Call Us</h3>
-                <p class="text-gray-600">+1 5589 55488 55</p>
+                <p class="text-gray-600">+94 25 2222 189</p>
             </div>
         </div>
 
-        <!-- Map and Form Section -->
+        <!-- Map & Form Section -->
         <div class="grid md:grid-cols-2 gap-8">
-            <!-- Map Section -->
+            <!-- Map -->
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <div class="w-full h-96 rounded-lg overflow-hidden">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=..."
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.9245508418375!2d80.38883847421542!3d8.335802691509184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afc2d605b6f6e5f%3A0x8cbb928b8c5c5f0!2sDepartment%20of%20Agriculture%2C%20North%20Central%20Province!5e0!3m2!1sen!2slk!4v1707823456789!5m2!1sen!2slk"
                         class="w-full h-full"
                         allowfullscreen=""
                         loading="lazy">
@@ -113,57 +144,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <!-- Contact Form -->
             <div class="bg-white p-6 rounded-lg shadow-md">
-                <?php if (isset($_SESSION['success'])): ?>
-                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
-                        <?php 
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
-                        ?>
-                    </div>
-                <?php endif; ?>
-
-                <?php if (isset($_SESSION['error'])): ?>
-                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-                        <?php 
-                        echo $_SESSION['error'];
-                        unset($_SESSION['error']);
-                        ?>
-                    </div>
-                <?php endif; ?>
-
                 <form action="contact.php" method="POST" enctype="multipart/form-data" class="space-y-6">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                        <input type="text" name="name" id="name" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
                     </div>
 
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                        <input type="email" name="email" id="email" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
                     </div>
 
                     <div>
-                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
                     </div>
 
                     <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                        <textarea name="message" id="message" rows="4" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"></textarea>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"></textarea>
                     </div>
 
-                    <div>
-                        <label for="file" class="block text-sm font-medium text-gray-700 mb-1">Attach File (optional)</label>
-                        <input type="file" name="file" id="file"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
-                    </div>
-
-                    <button type="submit"
-                        class="w-full bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 transition duration-300">
+                    <button type="submit" class="w-full bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 transition duration-300">
                         Send Message
                     </button>
                 </form>
