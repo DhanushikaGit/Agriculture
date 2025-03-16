@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture AI Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Chat Display Area -->
+        <div class="chat-display" id="chatDisplay"></div>
+
+        <!-- Quick Agriculture Questions -->
+        <div class="quick-questions">
+            <button onclick="askQuestion('What are the best crops for sandy soil?')">Sandy Soil Crops</button>
+            <button onclick="askQuestion('How to control aphids in tomatoes?')">Aphid Control</button>
+            <button onclick="askQuestion('What is the best fertilizer for paddy?')">Paddy Fertilizer</button>
+        </div>
+
+        <!-- Chat Input Area -->
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Type your agriculture question here..." />
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <button id="imageButton">
+                <img src="img.svg" alt="Upload Image">
+            </button>
+            <button id="sendButton">
+                <img src="up.svg" alt="Send">
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -7,7 +7,8 @@ const sendButton = document.getElementById("sendButton");
 
 // API Configuration
 const GEMINI_API_KEY = "AIzaSyBsxRTFdmHVTfP8-nL7eHCV46xGLLfWOPQ";
-const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent";
+const GEMINI_MODEL = "gemini-1.5-pro";
+const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1/models/${GEMINI_MODEL}:generateContent`;
 
 // Function to add messages to chat
 function addMessage(content, sender, isImage = false) {
@@ -19,9 +20,7 @@ function addMessage(content, sender, isImage = false) {
         : content;
     
     chatRow.innerHTML = `
-        ${sender === "user" ? `<img src="user-avatar.png" alt="User" class="chat-image">` : ""}
         <div class="chat-bubble ${sender}-bubble">${bubbleContent}</div>
-        ${sender === "ai" ? `<img src="ai-avatar.png" alt="AI" class="chat-image">` : ""}
     `;
     
     chatDisplay.appendChild(chatRow);
@@ -39,7 +38,7 @@ async function getAIResponse(userMessage) {
             body: JSON.stringify({
                 contents: [{
                     parts: [{
-                        text: userMessage
+                        text: `You are an agriculture expert. Provide detailed and accurate information about farming, crops, soil, weather, and related topics. ${userMessage}`
                     }]
                 }]
             })
@@ -102,11 +101,27 @@ imageInput.addEventListener("change", () => {
         }
         
         const reader = new FileReader();
-        reader.onload = () => {
+        reader.onload = async () => {
             addMessage(reader.result, "user", true);
-            addMessage("I apologize, but I can't process images at the moment.", "ai");
+            const imageData = reader.result.split(",")[1]; // Get base64 data
+
+            // Call a crop disease detection API (placeholder)
+            const detectionResult = await detectCropDisease(imageData);
+            addMessage(detectionResult, "ai");
         };
         reader.readAsDataURL(file);
     }
     imageInput.value = "";
 });
+
+// Placeholder function for crop disease detection
+async function detectCropDisease(imageData) {
+    // Replace with actual API call
+    return "⚠️ Crop disease detection is not available yet.";
+}
+
+// Quick question handler
+function askQuestion(question) {
+    userInput.value = question;
+    sendButton.click();
+}

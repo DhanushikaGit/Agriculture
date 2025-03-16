@@ -73,6 +73,23 @@ $locations_result = $conn->query($locations_sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+ <!-- Fonts -->
+ <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - View Weather Updates</title>
@@ -88,15 +105,16 @@ $locations_result = $conn->query($locations_sql);
         }
         .hover-highlight:hover {
             background-color: #f9fafb;
-            transition: background 0.3s ease;
+          
         }
     </style>
 </head>
 <body class="bg-gray-100 p-6">
+<?php include 'header.php'; ?>
     <div class="container mx-auto">
         <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">Weather Updates</h1>
 
-        <?php include 'header.php'; ?>
+     
 
         <div class="bg-white p-6 rounded-lg shadow-card mb-6">
             <form action="" method="GET" class="space-y-4">
