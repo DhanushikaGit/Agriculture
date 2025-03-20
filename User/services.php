@@ -36,22 +36,7 @@
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
-      <div class="container position-relative">
-        <h1>Services</h1>
-        <p>
-          Home
-          /
-          Services</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Services</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
+   
 
     <!-- Services Section -->
     <section id="services" class="services section">

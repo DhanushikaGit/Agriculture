@@ -79,22 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="bg-gray-50">
     <?php include 'header.php'; ?>
 
-   <!-- Page Title -->
-<div class="page-title dark-background relative text-center py-20 bg-cover bg-center text-white" 
-    style="background-image: url('assets/img/page-title-bg.webp');">
-    <div class="container mx-auto px-4">
-        <h1 class="text-5xl font-bold" data-aos="fade-up">Contact Us</h1>
-        <p class="text-lg mt-2">Home / Contact</p>
-        <nav class="breadcrumbs mt-3">
-            <ol class="flex justify-center space-x-2 text-gray-300">
-                <li><a href="index.html" class="hover:text-white">Home</a></li>
-                <li class="text-white">/</li>
-                <li class="current text-white">Contact</li>
-            </ol>
-        </nav>
-    </div>
-</div>
-<!-- End Page Title -->
+
 
 
     <main class="container mx-auto px-4 py-8">

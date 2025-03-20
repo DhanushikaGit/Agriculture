@@ -54,6 +54,9 @@ $guidelines = [
     <title>Farming Guidelines - Department of Agriculture</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Hero Section with Background -->
