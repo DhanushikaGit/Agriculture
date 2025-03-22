@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "root"; // Replace with your database username
 $password = "";     // Replace with your database password
 $dbname = "Agriculture_Services_Website";
-
+include 'admin_header.php'; 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 

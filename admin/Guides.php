@@ -1,5 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\The Department of Agriculture Services Website\db_connect.php'; // Include database connection
+include 'C:\xampp\htdocs\The Department of Agriculture Services Website\db_connect.php'; 
+include 'admin_header.php'; // Include database connection
 
 // Handle Form Submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -79,10 +80,11 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Manage Farming Guides</title>
-    <?php include 'header.php'; ?>
+ 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 p-6">
+
     <div class="container mx-auto">
         <h1 class="text-3xl font-bold text-center mb-6">Manage Farming Guides</h1>
 

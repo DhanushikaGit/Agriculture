@@ -1,5 +1,6 @@
 <?php
-include 'C:/xampp/htdocs/The Department of Agriculture Services Website/db_connect.php'; // Include database connection
+include 'C:/xampp/htdocs/The Department of Agriculture Services Website/db_connect.php'; 
+include 'admin_header.php'; // Include database connection
 
 // Handle Form Submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

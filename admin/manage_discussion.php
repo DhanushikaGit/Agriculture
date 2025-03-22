@@ -1,6 +1,7 @@
 <?php
 session_start(); // Start the session
-require 'C:\xampp\htdocs\The Department of Agriculture Services Website\db_connect.php'; // Include the database connection file
+require 'C:\xampp\htdocs\The Department of Agriculture Services Website\db_connect.php';
+include 'admin_header.php';  // Include the database connection file
 
 
 
@@ -24,6 +25,7 @@ $result = $conn->query("SELECT d.*, u.name FROM discussion d JOIN users u ON d.u
     <title>Manage Discussions</title>
 </head>
 <body>
+    
     <h2>Manage Discussion Forum</h2>
     <a href="discussion.php">Back to Discussion Forum</a>
     <hr>

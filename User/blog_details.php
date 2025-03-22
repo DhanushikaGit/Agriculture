@@ -67,23 +67,7 @@ $row = $result->fetch_assoc();
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
-      <div class="container position-relative">
-        <h1><?php echo htmlspecialchars($row['title']); ?></h1>
-        <p>
-          Home
-          /
-          Blog</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.php">Blog</a></li>
-            <li class="current"><?php echo htmlspecialchars($row['title']); ?></li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
+    
     <!-- Blog Details Section -->
     <section id="blog-details" class="blog-details section">
 

@@ -1,5 +1,6 @@
 <?php
 include '../db_connect.php'; // Database connection
+include 'admin_header.php'; 
 
 // Handle Form Submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

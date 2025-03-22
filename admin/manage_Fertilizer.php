@@ -1,5 +1,6 @@
 <?php
 include 'C:\xampp\htdocs\The Department of Agriculture Services Website\db_connect.php';
+include 'admin_header.php'; 
 
 // Handle form submissions
 $success_msg = "";

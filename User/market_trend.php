@@ -312,6 +312,7 @@ p.text-gray-700.font-bold::before {
     </style>
 </head>
 <body class="bg-gray-100 p-6">
+<?php include 'header.php'; ?>
     <div class="container mx-auto">
         <h1 class="text-3xl font-bold text-center mb-6">Market Trends</h1>
         
@@ -335,6 +336,7 @@ p.text-gray-700.font-bold::before {
             <?php endwhile; ?>
         </div>
     </div>
+    <?php include 'footer.php'; ?>
 </body>
 </html>
 

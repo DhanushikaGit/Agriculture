@@ -1,5 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\The Department of Agriculture Services Website\db_connect.php'; // Include your database connection file
+include 'C:\xampp\htdocs\The Department of Agriculture Services Website\db_connect.php'; 
+
 
 // Ensure that the connection is successful
 if ($conn->connect_error) {
@@ -78,7 +79,7 @@ $result = $conn->query($sql);
             document.getElementById('editForm').style.display = 'block';
         }
     </script>
-    <?php include 'header.php'; ?>
+    <?php include 'admin_header.php'; ?>
 </head>
 <body class="bg-gray-100">
     

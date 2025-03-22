@@ -54,7 +54,7 @@ if (!$result) {
 
   <main class="main">
 
-  
+  <h1 class="text-3xl font-bold text-center mb-6">Blogs</h1>
 
     <!-- Blog Posts 2 Section -->
     <section id="blog-posts-2" class="blog-posts-2 section">
