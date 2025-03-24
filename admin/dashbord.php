@@ -300,84 +300,7 @@
             background-color: var(--accent-color);
         }
         
-        .chart-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .chart-card {
-            min-height: 400px;
-        }
-        
-        .chart-title {
-            margin-bottom: 15px;
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
-        
-        .weather-card {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .weather-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
-        
-        .weather-location {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .weather-body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .weather-icon {
-            font-size: 50px;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .weather-temp {
-            font-size: 38px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .weather-desc {
-            font-size: 16px;
-            color: #7f8c8d;
-            margin-bottom: 15px;
-        }
-        
-        .weather-details {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 10px;
-        }
-        
-        .weather-detail {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .weather-detail i {
-            color: var(--primary-color);
-        }
+       
         
         .recent-activity {
             background: white;
@@ -623,7 +546,7 @@
 </head>
 <body>
     <!-- Header included in the original file -->
-
+    <?php include '../admin/admin_header.php'; ?>
     <!-- Content Area -->
     <div class="content">
         <h1 class="page-title"><i class="fas fa-seedling"></i> Agriculture Department Dashboard</h1>
@@ -671,52 +594,7 @@
             </div>
         </div>
         
-        <!-- Charts and Weather -->
-        <div class="chart-container">
-            <div class="card chart-card">
-                <h3 class="chart-title">Crop Production Trends</h3>
-                <canvas id="productionChart"></canvas>
-            </div>
-            
-            <div class="card weather-card">
-                <div class="weather-header">
-                    <div class="weather-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Central District</span>
-                    </div>
-                    <span>Today, Mar 22</span>
-                </div>
-                
-                <div class="weather-body">
-                    <i class="fas fa-sun weather-icon"></i>
-                    <div class="weather-temp">29°C</div>
-                    <div class="weather-desc">Sunny, Clear Sky</div>
-                    <div class="weather-details">
-                        <div class="weather-detail">
-                            <i class="fas fa-tint"></i>
-                            <span>Humidity: 65%</span>
-                        </div>
-                        <div class="weather-detail">
-                            <i class="fas fa-wind"></i>
-                            <span>Wind: 12 km/h</span>
-                        </div>
-                        <div class="weather-detail">
-                            <i class="fas fa-cloud-rain"></i>
-                            <span>Rain: 5%</span>
-                        </div>
-                        <div class="weather-detail">
-                            <i class="fas fa-temperature-high"></i>
-                            <span>UV Index: High</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="weather-forecast">
-                    <h4>5-Day Forecast</h4>
-                    <!-- Forecast details would go here -->
-                </div>
-            </div>
-        </div>
+       
         
         <!-- Recent Activities and Crop Status -->
         <div class="grid-bottom">

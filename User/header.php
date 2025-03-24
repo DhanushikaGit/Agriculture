@@ -74,7 +74,7 @@
                 <li><a href="./discussion.php">Discussion</a></li>
                 <li><a href="./blog.php">Blog</a></li>
                 <li class="dropdown">
-                    <a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <a href="#"><span>Farming & Markets</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         
                         <li class="dropdown">

@@ -1,6 +1,8 @@
 <?php
+ob_start(); // Start output buffering to prevent header issues
+session_start();
 include '../db_connect.php'; // Database connection
-include 'admin_header.php'; 
+include 'admin_header.php'; // Include admin header
 
 // Handle Form Submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -8,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $product_name = $_POST["product_name"];
     $price = $_POST["price"];
     $description = $_POST["description"];
-    $id = isset($_POST["id"]) ? $_POST["id"] : null; // Get the id if editing
+    $id = isset($_POST["id"]) ? $_POST["id"] : null;
 
     $uploadDir = "../uploads/";
 
@@ -26,20 +28,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (in_array(strtolower($fileExt), $allowedExts)) {
             $newFileName = uniqid() . "." . $fileExt;
-            $imagePath = "uploads/" . $newFileName; // Store relative path
+            $imagePath = "uploads/" . $newFileName;
             $uploadPath = $uploadDir . $newFileName;
 
             if (!move_uploaded_file($fileTmpName, $uploadPath)) {
-                echo "Failed to upload image.";
+                $_SESSION['error'] = "Failed to upload image.";
+                header("Location: market_trend.php");
                 exit;
             }
         } else {
-            echo "Invalid file type. Only JPG, PNG, and GIF are allowed.";
+            $_SESSION['error'] = "Invalid file type. Only JPG, PNG, and GIF are allowed.";
+            header("Location: market_trend.php");
             exit;
         }
     }
 
-    // Update or Insert based on whether $id is set (edit or add new)
+    // Update or Insert
     if ($id) {
         $sql = "UPDATE market_trends SET category=?, product_name=?, price=?, description=?, image_path=? WHERE id=?";
         $stmt = $conn->prepare($sql);
@@ -51,10 +55,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($stmt->execute()) {
-        header("Location: market_trend.php?success=1");
+        $_SESSION['success'] = "Operation completed successfully.";
+        header("Location: market_trend.php");
         exit();
     } else {
-        echo "Error: " . $stmt->error;
+        $_SESSION['error'] = "Error: " . $stmt->error;
+        header("Location: market_trend.php");
+        exit();
     }
 }
 
@@ -65,10 +72,13 @@ if (isset($_GET['delete'])) {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
     if ($stmt->execute()) {
-        header("Location: market_trend.php?delete_success=1");
+        $_SESSION['success'] = "Record deleted successfully.";
+        header("Location: market_trend.php");
         exit();
     } else {
-        echo "Error: " . $stmt->error;
+        $_SESSION['error'] = "Error: " . $stmt->error;
+        header("Location: market_trend.php");
+        exit();
     }
 }
 
@@ -86,7 +96,7 @@ $result = $conn->query($sql);
     <title>Admin - Manage Market Trends</title>
     
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <?php include 'header.php'; ?>
+ 
 </head>
 <body class="bg-gray-100 p-6">
     <div class="container mx-auto">

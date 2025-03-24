@@ -344,7 +344,7 @@
         
         <ul class="sidebar-menu">
     <li>
-        <a href="dashboard.php" class="active">
+        <a href="dashbord.php" class="active">
             <i class="fas fa-home"></i>
             <span>Dashboard</span>
         </a>
@@ -421,27 +421,9 @@
     </li>
 </ul>
 
-        <div class="search-wrapper">
-            <input type="text" placeholder="Search...">
-            <i class="fas fa-search"></i>
-        </div>
         
-        <div class="user-wrapper">
-            <div class="notifications">
-                <i class="fas fa-bell"></i>
-                <span class="count">5</span>
-            </div>
-            
-            <div class="user-profile">
-                <div class="profile-img">
-                    <img src="/api/placeholder/40/40" alt="User">
-                </div>
-                <div>
-                    <h4>John Doe</h4>
-                    <small>Administrator</small>
-                </div>
-            </div>
-        </div>
+        
+       
     </div>
 
     <!-- Content Area -->
