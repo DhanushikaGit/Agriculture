@@ -57,6 +57,9 @@
     #chat-box.active {
       display: flex;
     }
+    #chat-box {
+    z-index: 1000;
+}
     
     #chat-header {
       padding: 15px;

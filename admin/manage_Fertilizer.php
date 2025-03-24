@@ -70,119 +70,113 @@ $result_farmers = $conn->query($sql_farmers);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Manage Notices & Farmers</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .success-msg {
-            color: green;
-            font-weight: bold;
-        }
-        .error-msg {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
 </head>
-<body>
-    <h2>Manage Fertilizer Notices</h2>
+<body class="bg-gray-100 p-6">
 
-    <!-- Display Success/Error Messages -->
-    <?php if (!empty($success_msg)): ?>
-        <p class="success-msg"><?= $success_msg; ?></p>
-    <?php endif; ?>
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-gray-800 text-center">Manage Fertilizer Notices</h2>
 
-    <!-- Add Notice Form -->
-    <h3>Add New Notice</h3>
-    <form method="POST" action="">
-        <input type="hidden" name="add_notice">
-        <label>Title:</label><br>
-        <input type="text" name="title" required><br><br>
-        <label>Fertilizer Type:</label><br>
-        <input type="text" name="fertilizer_type" required><br><br>
-        <label>Description:</label><br>
-        <textarea name="description" required></textarea><br><br>
-        <label>Date:</label><br>
-        <input type="date" name="date" required><br><br>
-        <label>Time:</label><br>
-        <input type="time" name="time" required><br><br>
-        <button type="submit">Add Notice</button>
-    </form>
+        <!-- Display Success/Error Messages -->
+        <?php if (!empty($success_msg)): ?>
+            <p class="text-green-600 font-semibold text-center mt-4"><?= $success_msg; ?></p>
+        <?php endif; ?>
 
-    <!-- Display Notices -->
-    <h3>Fertilizer Notices</h3>
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Fertilizer Type</th>
-            <th>Description</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Actions</th>
-        </tr>
-        <?php while ($row = $result_notices->fetch_assoc()): ?>
-        <tr>
-            <td><?= $row['title']; ?></td>
-            <td><?= $row['fertilizer_type']; ?></td>
-            <td><?= $row['description']; ?></td>
-            <td><?= $row['date']; ?></td>
-            <td><?= $row['time']; ?></td>
-            <td>
-                <!-- Edit Notice Form -->
-                <form method="POST" action="" style="display: inline;">
-                    <input type="hidden" name="edit_notice">
-                    <input type="hidden" name="id" value="<?= $row['id']; ?>">
-                    <button type="submit">Edit</button>
-                </form>
-                <!-- Delete Notice Link -->
-                <a href="?delete_id=<?= $row['id']; ?>" onclick="return confirm('Are you sure?');">Delete</a>
-            </td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
+        <!-- Add Notice Form -->
+        <h3 class="text-xl font-semibold text-gray-700 mt-6">Add New Notice</h3>
+        <form method="POST" action="" class="bg-gray-50 p-4 rounded-lg shadow-md mt-4">
+            <input type="hidden" name="add_notice">
+            <label class="block font-medium text-gray-600">Title:</label>
+            <input type="text" name="title" class="w-full p-2 border rounded-lg mt-1" required>
 
-    <!-- Display Registered Farmers -->
-    <h2>Registered Farmers</h2>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>Society Number</th>
-            <th>Land Location</th>
-            <th>Land Size</th>
-            <th>Cultivated Area</th>
-            <th>Crop Type</th>
-            <th>Phone</th>
-            <th>ID Number</th>
-        </tr>
-        <?php while ($farmer = $result_farmers->fetch_assoc()): ?>
-        <tr>
-            <td><?= $farmer['name']; ?></td>
-            <td><?= $farmer['address']; ?></td>
-            <td><?= $farmer['society_number']; ?></td>
-            <td><?= $farmer['land_location']; ?></td>
-            <td><?= $farmer['land_size']; ?></td>
-            <td><?= $farmer['cultivated_area']; ?></td>
-            <td><?= $farmer['crop_type']; ?></td>
-            <td><?= $farmer['phone']; ?></td>
-            <td><?= $farmer['id_number']; ?></td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
+            <label class="block font-medium text-gray-600 mt-2">Fertilizer Type:</label>
+            <input type="text" name="fertilizer_type" class="w-full p-2 border rounded-lg mt-1" required>
+
+            <label class="block font-medium text-gray-600 mt-2">Description:</label>
+            <textarea name="description" class="w-full p-2 border rounded-lg mt-1" required></textarea>
+
+            <label class="block font-medium text-gray-600 mt-2">Date:</label>
+            <input type="date" name="date" class="w-full p-2 border rounded-lg mt-1" required>
+
+            <label class="block font-medium text-gray-600 mt-2">Time:</label>
+            <input type="time" name="time" class="w-full p-2 border rounded-lg mt-1" required>
+
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 mt-4 rounded-lg hover:bg-blue-600">Add Notice</button>
+        </form>
+
+        <!-- Display Notices -->
+        <h3 class="text-xl font-semibold text-gray-700 mt-6">Fertilizer Notices</h3>
+        <div class="overflow-x-auto">
+            <table class="w-full mt-4 bg-white border rounded-lg shadow-md">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="p-3 border">Title</th>
+                        <th class="p-3 border">Fertilizer Type</th>
+                        <th class="p-3 border">Description</th>
+                        <th class="p-3 border">Date</th>
+                        <th class="p-3 border">Time</th>
+                        <th class="p-3 border">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($row = $result_notices->fetch_assoc()): ?>
+                    <tr class="text-center">
+                        <td class="p-3 border"><?= $row['title']; ?></td>
+                        <td class="p-3 border"><?= $row['fertilizer_type']; ?></td>
+                        <td class="p-3 border"><?= $row['description']; ?></td>
+                        <td class="p-3 border"><?= $row['date']; ?></td>
+                        <td class="p-3 border"><?= $row['time']; ?></td>
+                        <td class="p-3 border">
+                            <form method="POST" action="" class="inline">
+                                <input type="hidden" name="edit_notice">
+                                <input type="hidden" name="id" value="<?= $row['id']; ?>">
+                                <button type="submit" class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600">Edit</button>
+                            </form>
+                            <a href="?delete_id=<?= $row['id']; ?>" onclick="return confirm('Are you sure?');" 
+                               class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 ml-2">Delete</a>
+                        </td>
+                    </tr>
+                    <?php endwhile; ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Display Registered Farmers -->
+        <h2 class="text-2xl font-bold text-gray-800 text-center mt-10">Registered Farmers</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full mt-4 bg-white border rounded-lg shadow-md">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="p-3 border">Name</th>
+                        <th class="p-3 border">Address</th>
+                        <th class="p-3 border">Society Number</th>
+                        <th class="p-3 border">Land Location</th>
+                        <th class="p-3 border">Land Size</th>
+                        <th class="p-3 border">Cultivated Area</th>
+                        <th class="p-3 border">Crop Type</th>
+                        <th class="p-3 border">Phone</th>
+                        <th class="p-3 border">ID Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($farmer = $result_farmers->fetch_assoc()): ?>
+                    <tr class="text-center">
+                        <td class="p-3 border"><?= $farmer['name']; ?></td>
+                        <td class="p-3 border"><?= $farmer['address']; ?></td>
+                        <td class="p-3 border"><?= $farmer['society_number']; ?></td>
+                        <td class="p-3 border"><?= $farmer['land_location']; ?></td>
+                        <td class="p-3 border"><?= $farmer['land_size']; ?></td>
+                        <td class="p-3 border"><?= $farmer['cultivated_area']; ?></td>
+                        <td class="p-3 border"><?= $farmer['crop_type']; ?></td>
+                        <td class="p-3 border"><?= $farmer['phone']; ?></td>
+                        <td class="p-3 border"><?= $farmer['id_number']; ?></td>
+                    </tr>
+                    <?php endwhile; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </body>
 </html>
-
-<?php
-$conn->close();
-?>

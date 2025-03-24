@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Favicons -->
-    <link href="assets/img/logoo-Recovered.bmp" rel="icon">
+    <link href="assets/img/logoo-Recovered.jpg" rel="icon">
     <link href="assets/img/logoo-Recovered.bmp" rel="apple-touch-icon">
 
     <!-- Fonts -->

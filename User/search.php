@@ -1,6 +1,4 @@
 <?php
-// search.php
-
 // Database connection
 $servername = "127.0.0.1";
 $username = "root"; // Replace with your database username
@@ -15,12 +13,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get the search query from the URL parameter
-$query = isset($_GET['query']) ? $_GET['query'] : '';
+// Get the search query from URL parameter
+$query = isset($_GET['query']) ? trim($_GET['query']) : '';
 
-// If the query is not empty, perform the search
+// Initialize results array
+$results = [];
+
 if (!empty($query)) {
-    // Prepare the SQL statement to search across multiple tables
+    // Prepare the SQL statement
     $sql = "
     (SELECT id, title, content AS description, 'blogs' AS source FROM blogs WHERE title LIKE ? OR content LIKE ?)
     UNION
@@ -29,36 +29,33 @@ if (!empty($query)) {
     (SELECT id, title, introduction AS description, 'farming_tips' AS source FROM farming_tips WHERE title LIKE ? OR introduction LIKE ?)
     UNION
     (SELECT id, product_name AS title, description, 'market_trends' AS source FROM market_trends WHERE product_name LIKE ? OR description LIKE ?)
-";
+    ";
 
-
-    // Prepare the statement
+    // Prepare statement
     $stmt = $conn->prepare($sql);
     if ($stmt === false) {
         die("Error preparing statement: " . $conn->error);
     }
 
     // Bind parameters
-    $searchQuery = "%$query%";
+    $searchQuery = "%" . $query . "%";
     $stmt->bind_param("ssssssss", $searchQuery, $searchQuery, $searchQuery, $searchQuery, $searchQuery, $searchQuery, $searchQuery, $searchQuery);
 
     // Execute the query
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    // Fetch results
-    $results = [];
-    while ($row = $result->fetch_assoc()) {
-        $results[] = $row;
+    if ($stmt->execute()) {
+        $result = $stmt->get_result();
+        while ($row = $result->fetch_assoc()) {
+            $results[] = $row;
+        }
+    } else {
+        die("Query execution failed: " . $stmt->error);
     }
 
-    // Close the statement
+    // Close statement
     $stmt->close();
-} else {
-    $results = [];
 }
 
-// Close the database connection
+// Close database connection
 $conn->close();
 ?>
 
@@ -70,8 +67,7 @@ $conn->close();
     <title>Search Results</title>
     <link href="assets/css/main.css" rel="stylesheet">
     <?php include 'header.php'; ?>
-  
-  <?php include 'chatbot.php'; ?>
+    <?php include 'chatbot.php'; ?>
     <style>
         .search-results {
             margin: 20px;
@@ -104,6 +100,7 @@ $conn->close();
 <body>
     <header id="header">
         <h1>Search Results</h1>
+    </header>
     <main id="main">
         <div class="search-results">
             <h2>Search Results for "<?php echo htmlspecialchars($query); ?>"</h2>

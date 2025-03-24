@@ -72,6 +72,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Fertilizer Usage</title>
+    <link href="../User/assets/img/logoo-Recovered.jpg" rel="icon">
     <style>
         body {
             font-family: Arial, sans-serif;

@@ -54,10 +54,8 @@ $result = $conn->query("SELECT d.*, u.name FROM discussion d JOIN users u ON d.u
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-
-    <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/logoo-Recovered.jpg" rel="icon">
+   
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">

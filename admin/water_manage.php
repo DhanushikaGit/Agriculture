@@ -75,61 +75,75 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Admin - Water Schedule Management</title>
 </head>
-<body>
-    <h2>Add Water Schedule</h2>
-    <form method="post">
-        <label>Region:</label>
-        <input type="text" name="region" required><br>
-        <label>Date:</label>
-        <input type="date" name="date" required><br>
-        <label>Time:</label>
-        <input type="time" name="time" required><br>
-        <button type="submit" name="add">Add Schedule</button>
-    </form>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-gray-800 text-center">Add Water Schedule</h2>
 
-    <h2>Water Schedule List</h2>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Region</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Actions</th>
-        </tr>
-        <?php while ($row = $result->fetch_assoc()): ?>
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['region']; ?></td>
-            <td><?php echo $row['date']; ?></td>
-            <td><?php echo $row['time']; ?></td>
-            <td>
-                <a href="?edit=<?php echo $row['id']; ?>">Edit</a> | 
-                <a href="?delete=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
-            </td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
+        <form method="post" class="bg-gray-50 p-4 rounded-lg shadow-md mt-4">
+            <label class="block font-medium text-gray-600">Region:</label>
+            <input type="text" name="region" class="w-full p-2 border rounded-lg mt-1" required>
 
-    <?php if (isset($_GET['edit'])): 
-        $id = $_GET['edit'];
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        $result = $conn->query("SELECT * FROM water_schedule WHERE id=$id")->fetch_assoc();
-    ?>
-    <h2>Edit Water Schedule</h2>
-    <form method="post">
-        <input type="hidden" name="id" value="<?php echo $result['id']; ?>">
-        <label>Region:</label>
-        <input type="text" name="region" value="<?php echo $result['region']; ?>" required><br>
-        <label>Date:</label>
-        <input type="date" name="date" value="<?php echo $result['date']; ?>" required><br>
-        <label>Time:</label>
-        <input type="time" name="time" value="<?php echo $result['time']; ?>" required><br>
-        <button type="submit" name="update">Update Schedule</button>
-    </form>
-    <?php endif; ?>
+            <label class="block font-medium text-gray-600 mt-2">Date:</label>
+            <input type="date" name="date" class="w-full p-2 border rounded-lg mt-1" required>
+
+            <label class="block font-medium text-gray-600 mt-2">Time:</label>
+            <input type="time" name="time" class="w-full p-2 border rounded-lg mt-1" required>
+
+            <button type="submit" name="add" class="w-full bg-blue-500 text-white p-2 mt-4 rounded-lg hover:bg-blue-600">Add Schedule</button>
+        </form>
+
+        <h2 class="text-2xl font-bold text-gray-800 text-center mt-6">Water Schedule List</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full mt-4 bg-white border rounded-lg shadow-md">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="p-3 border">ID</th>
+                        <th class="p-3 border">Region</th>
+                        <th class="p-3 border">Date</th>
+                        <th class="p-3 border">Time</th>
+                        <th class="p-3 border">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($row = $result->fetch_assoc()): ?>
+                    <tr class="text-center">
+                        <td class="p-3 border"><?= $row['id']; ?></td>
+                        <td class="p-3 border"><?= $row['region']; ?></td>
+                        <td class="p-3 border"><?= $row['date']; ?></td>
+                        <td class="p-3 border"><?= $row['time']; ?></td>
+                        <td class="p-3 border">
+                            <a href="?edit=<?= $row['id']; ?>" class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600">Edit</a>
+                            <a href="?delete=<?= $row['id']; ?>" onclick="return confirm('Are you sure?');" class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 ml-2">Delete</a>
+                        </td>
+                    </tr>
+                    <?php endwhile; ?>
+                </tbody>
+            </table>
+        </div>
+
+        <?php if (isset($_GET['edit'])): ?>
+        <h2 class="text-2xl font-bold text-gray-800 text-center mt-6">Edit Water Schedule</h2>
+        <form method="post" class="bg-gray-50 p-4 rounded-lg shadow-md mt-4">
+            <input type="hidden" name="id" value="<?= $result['id']; ?>">
+            <label class="block font-medium text-gray-600">Region:</label>
+            <input type="text" name="region" value="<?= $result['region']; ?>" class="w-full p-2 border rounded-lg mt-1" required>
+
+            <label class="block font-medium text-gray-600 mt-2">Date:</label>
+            <input type="date" name="date" value="<?= $result['date']; ?>" class="w-full p-2 border rounded-lg mt-1" required>
+
+            <label class="block font-medium text-gray-600 mt-2">Time:</label>
+            <input type="time" name="time" value="<?= $result['time']; ?>" class="w-full p-2 border rounded-lg mt-1" required>
+
+            <button type="submit" name="update" class="w-full bg-green-500 text-white p-2 mt-4 rounded-lg hover:bg-green-600">Update Schedule</button>
+        </form>
+        <?php endif; ?>
+    </div>
 </body>
 </html>

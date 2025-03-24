@@ -45,29 +45,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Login process
             $email = trim($_POST["email"]);
             $password = trim($_POST["password"]);
-
+        
             // Fetch user from database
             $sql = "SELECT id, name, password FROM users WHERE email = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("s", $email);
             $stmt->execute();
             $stmt->store_result();
-
+        
             if ($stmt->num_rows > 0) {
                 $stmt->bind_result($id, $name, $hashed_password);
                 $stmt->fetch();
-
+        
                 if (password_verify($password, $hashed_password)) {
                     $_SESSION["user_id"] = $id;
                     $_SESSION["user_name"] = $name;
-                    echo "<script>alert('Login successful!');</script>";
+        
+                    // Redirect to home page after successful login
+                    header("Location: http://localhost/The%20Department%20of%20Agriculture%20Services%20Website/User/home.php"); // Replace "home.php" with your home page URL
+                    exit(); // Ensure no further code is executed after the redirect
                 } else {
                     echo "<script>alert('Invalid credentials. Please try again.');</script>";
                 }
             } else {
                 echo "<script>alert('No account found with that email.');</script>";
             }
-
+        
             $stmt->close();
         }
     }
@@ -85,6 +88,7 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
     <title>Department of Agriculture Services</title>
+    <link href="../assets/img/logoo-Recovered.jpg" rel="icon">
 </head>
 <body>
     <div class="container" id="container">
@@ -96,6 +100,7 @@ $result = $conn->query($sql);
                 <input type="password" name="password" placeholder="Password" required>
                 <input type="hidden" name="action" value="signup">
                 <button type="submit">Sign Up</button>
+                
             </form>
         </div>
         <div class="form-container sign-in-container">

@@ -1,6 +1,6 @@
 <?php
 include 'C:/xampp/htdocs/The Department of Agriculture Services Website/db_connect.php'; 
-include 'admin_header.php'; // Include database connection
+include 'admin_header.php';
 
 // Handle Form Submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,12 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Move the uploaded PDF to the desired directory
             if (!move_uploaded_file($fileTmpName, $filePath)) {
-                echo "Failed to move uploaded file.";
-                exit;
+                die("Failed to move uploaded file.");
             }
         } else {
-            echo "Invalid file type. Only PDF is allowed.";
-            exit;
+            die("Invalid file type. Only PDF is allowed.");
         }
     }
 
@@ -49,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: weather_update.php");
         exit();
     } else {
-        echo "Error: " . $stmt->error;
+        die("Error: " . $stmt->error);
     }
 }
 
@@ -63,7 +61,7 @@ if (isset($_GET['delete'])) {
         header("Location: weather_update.php");
         exit();
     } else {
-        echo "Error: " . $stmt->error;
+        die("Error: " . $stmt->error);
     }
 }
 
@@ -71,14 +69,12 @@ if (isset($_GET['delete'])) {
 $sql = "SELECT * FROM weather_updates ORDER BY update_time DESC";
 $result = $conn->query($sql);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Manage Weather Updates</title>
-    <?php include 'header.php'; ?>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .container {
@@ -107,7 +103,7 @@ $result = $conn->query($sql);
                 <textarea name="conditions" id="conditions" class="w-full p-2 border rounded-lg mb-2" rows="4" required></textarea>
 
                 <label class="block mb-2">Upload PDF (optional)</label>
-                <input type="file" name="pdf" id="pdf" class="w-full p-2 border rounded-lg mb-2">
+                <input type="file" name="pdf" id="pdf" class="w-full p-2 border rounded-lg mb-2" accept=".pdf">
 
                 <button type="submit" class="bg-blue-500 text-white p-2 rounded-lg">Save Update</button>
             </form>
