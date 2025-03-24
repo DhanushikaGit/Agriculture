@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agriculture AI Chatbot</title>
+    <title>Agriculture AI Assistant</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <img src="../assets/img/chatbot.jpg" alt="Agriculture AI">
+            <h2>Agriculture AI Assistant</h2>
+        </div>
+        
         <!-- Chat Display Area -->
-        <div class="chat-display" id="chatDisplay"></div>
-
+        <div class="chat-display" id="chatDisplay">
+            <!-- AI welcome message will be added via JavaScript -->
+        </div>
+        
         <!-- Quick Agriculture Questions -->
         <div class="quick-questions">
             <button onclick="askQuestion('What are the best crops for sandy soil?')">Sandy Soil Crops</button>
             <button onclick="askQuestion('How to control aphids in tomatoes?')">Aphid Control</button>
             <button onclick="askQuestion('What is the best fertilizer for paddy?')">Paddy Fertilizer</button>
+            <button onclick="askQuestion('Seasonal planting guide')">Planting Guide</button>
+            <button onclick="askQuestion('Organic pest control methods')">Organic Pest Control</button>
         </div>
-
+        
         <!-- Chat Input Area -->
         <div class="chat-input-area">
             <input type="text" id="userInput" placeholder="Type your agriculture question here..." />
@@ -30,7 +41,7 @@
             </button>
         </div>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>

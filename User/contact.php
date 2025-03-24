@@ -80,8 +80,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include 'header.php'; ?>
 
 
+    <?php include 'chatbot.php'; ?>
 
-
+    <h1 class="text-3xl font-bold text-center mb-6">Contact Us</h1>
     <main class="container mx-auto px-4 py-8">
         <!-- Contact Info Section -->
         <div class="grid md:grid-cols-3 gap-8 my-12">

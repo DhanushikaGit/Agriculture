@@ -10,6 +10,8 @@
 <body class="bg-gray-50">
     <<?php include 'header.php'; ?>
 
+    <?php include 'chatbot.php'; ?>
+    <h1 class="text-3xl font-bold text-center mb-6">farming guildlines</h1>
     <main class="container mx-auto px-4 py-8">
         <div class="grid md:grid-cols-2 gap-8 mb-12">
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">

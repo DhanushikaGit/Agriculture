@@ -2,18 +2,7 @@
 session_start();
 require 'C:\xampp\htdocs\The Department of Agriculture Services Website\db_connect.php';
 
-if (!isset($_SESSION['user_id'])) {
-    if (!isset($_SESSION['redirected'])) {
-        $_SESSION['redirected'] = true;
-        echo "<script>
-            alert('You need to log in or register to access the discussion forum.');
-            window.location.href = 'http://localhost/The%20Department%20of%20Agriculture%20Services%20Website/User/login_Signup%20_Page/login.php';
-        </script>";
-        exit();
-    }
-} else {
-    unset($_SESSION['redirected']);
-}
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['message'])) {
     $user_id = $_SESSION['user_id'];
@@ -382,6 +371,7 @@ main.container {
 <body class="bg-gray-50">
     <?php include 'header.php'; ?>
 
+    <?php include 'chatbot.php'; ?>
     <main class="container mx-auto px-4 py-8">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-3xl font-bold text-green-800 mb-8 text-center">Agricultural Discussion Forum</h1>

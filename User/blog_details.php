@@ -64,6 +64,7 @@ $row = $result->fetch_assoc();
 
 <?php include 'header.php'; ?>
 
+<?php include 'chatbot.php'; ?>
   <main class="main">
 
     <!-- Page Title -->

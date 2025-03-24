@@ -21,8 +21,8 @@ if (!$result) {
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logoo-Recovered.jpg" rel="icon">
+ 
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -38,11 +38,13 @@ if (!$result) {
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+ 
 
 <body class="index-page">
 
   <?php include 'header.php'; ?>
+  
+  <?php include 'chatbot.php'; ?>
   <main class="main">
 
     <!-- Hero Section -->
@@ -272,6 +274,10 @@ if (!$result) {
   </div>
 </div>
 </section><!-- /Testimonials Section -->
+
+
+
+
 
     <!-- About Section -->
     <section id="about" class="about section">

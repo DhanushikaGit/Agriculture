@@ -375,6 +375,8 @@ div[id^="details-"]:target {
 </head>
 <body class="bg-gray-100 p-6">
 <?php include 'header.php'; ?>
+
+<?php include 'chatbot.php'; ?>
     <div class="container mx-auto">
         <h1 class="text-3xl font-bold text-center mb-6">Quick and Useful Tips for Successful Farming</h1>
         <img src="image.png" class="mx-auto mb-4 rounded-lg shadow-md" alt="Tips for successful farming" width="500">

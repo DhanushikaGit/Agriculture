@@ -18,6 +18,7 @@
 
 <?php include 'header.php'; ?>
 
+<?php include 'chatbot.php'; ?>
   <main class="main">
 
 

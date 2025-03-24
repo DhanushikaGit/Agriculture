@@ -343,78 +343,84 @@
         </div>
         
         <ul class="sidebar-menu">
-            <li>
-                <a href="dashboard.php" class="active">
-                    <i class="fas fa-home"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="submenu-toggle">
-                    <i class="fas fa-table"></i>
-                    <span>Tables</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </a>
-                <ul class="submenu">
-                    <li><a href="basic-tables.php">Basic Tables</a></li>
-                    <li><a href="data-tables.php">Data Tables</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="submenu-toggle">
-                    <i class="fas fa-edit"></i>
-                    <span>Forms</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </a>
-                <ul class="submenu">
-                    <li><a href="form-elements.php">Form Elements</a></li>
-                    <li><a href="form-validation.php">Form Validation</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="calendar.php">
-                    <i class="fas fa-calendar"></i>
-                    <span>Calendar</span>
-                </a>
-            </li>
-            <li>
-                <a href="charts.php">
-                    <i class="fas fa-chart-pie"></i>
-                    <span>Charts</span>
-                </a>
-            </li>
-            <li>
-                <a href="users.php">
-                    <i class="fas fa-users"></i>
-                    <span>User Management</span>
-                </a>
-            </li>
-            <li>
-                <a href="settings.php">
-                    <i class="fas fa-cog"></i>
-                    <span>Settings</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="submenu-toggle">
-                    <i class="fas fa-file-alt"></i>
-                    <span>Pages</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </a>
-                <ul class="submenu">
-                    <li><a href="profile.php">Profile</a></li>
-                    <li><a href="invoices.php">Invoices</a></li>
-                    <li><a href="faq.php">FAQ</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="logout.php">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Logout</span>
-                </a>
-            </li>
+    <li>
+        <a href="dashboard.php" class="active">
+            <i class="fas fa-home"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="./add_blog.php">
+            <i class="fas fa-blog"></i>
+            <span>Manage Blog</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="./farming_tips.php">
+            <i class="fas fa-lightbulb"></i>
+            <span>Manage Farming Tips</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="./user_manage.php">
+            <i class="fas fa-users"></i>
+            <span>Manage Users</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="./manage_discussion.php">
+            <i class="fas fa-comments"></i>
+            <span>Manage Discussion</span>
+        </a>
+    </li>
+
+    <!-- Dropdown Menu for Agriculture Management -->
+    <li>
+        <a href="javascript:void(0);" class="submenu-toggle">
+            <i class="fas fa-seedling"></i>
+            <span>Agriculture Management</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+        <ul class="submenu">
+            <li><a href="./add_cultivation.php">Manage Cultivation</a></li>
+            <li><a href="./crop_management.php">Manage Crop</a></li>
+            <li><a href="./Technology.php">Manage Technology</a></li>
         </ul>
-        
+    </li>
+
+    <!-- Dropdown Menu for Resource Management -->
+    <li>
+        <a href="javascript:void(0);" class="submenu-toggle">
+            <i class="fas fa-tools"></i>
+            <span>Resource Management</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+        <ul class="submenu">
+            <li><a href="./water_manage.php">Manage Water</a></li>
+            <li><a href="./Fertilize_usage.php">Manage Fertilizer</a></li>
+            <li><a href="./weather_update.php">Weather Update</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="./contact.php">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="logout.php">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+    </li>
+</ul>
+
         <div class="search-wrapper">
             <input type="text" placeholder="Search...">
             <i class="fas fa-search"></i>

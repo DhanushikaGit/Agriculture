@@ -52,6 +52,8 @@ if (!$result) {
 
 <?php include 'header.php'; ?>
 
+<?php include 'chatbot.php'; ?>
+
   <main class="main">
 
   <h1 class="text-3xl font-bold text-center mb-6">Blogs</h1>

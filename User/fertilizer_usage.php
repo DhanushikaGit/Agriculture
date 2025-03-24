@@ -21,6 +21,8 @@ if (!$categoryResult) {
 </head>
 
 <body class="bg-gray-100">
+    
+<?php include 'chatbot.php'; ?>
     <?php
     // Include the header file
     $headerPath = 'C:/xampp/htdocs/The Department of Agriculture Services Website/User/header.php';
