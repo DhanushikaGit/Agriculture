@@ -107,109 +107,93 @@ if (!$result) {
 
     </section><!-- /Hero Section -->
 <!-- New Technology Grid Section -->
-<!-- New Technology Grid Section -->
 <section id="technology" class="technology section">
   <div class="container">
-    <div class="row g-0">
+    <h2 class="text-center mb-4">New Agricultural Technologies</h2>
+    <div class="row g-4">
       <!-- Tech 1 -->
       <div class="col-lg-3 col-md-6">
-        <div class="tech-item">
-          <div class="tech-icon">
-            <i class="fas fa-tint"></i> <!-- Font Awesome icon for water -->
+        <div class="tech-item text-center p-3 border rounded shadow">
+          <div class="tech-icon mb-3">
+            <i class="fas fa-tint fa-2x"></i>
           </div>
-          <h3 class="tech-heading">Smart Irrigation Systems</h3>
-          <p>
-            Advanced irrigation systems that use sensors and AI to optimize water usage, ensuring crops get the right amount of water at the right time.
-          </p>
+          <h4 class="tech-heading">Smart Irrigation Systems</h4>
+          <p>AI-powered irrigation systems optimize water usage, ensuring efficient crop hydration.</p>
         </div>
       </div>
       <!-- Tech 2 -->
       <div class="col-lg-3 col-md-6">
-        <div class="tech-item">
-          <div class="tech-icon">
-            <i class="fas fa-helicopter"></i> <!-- Font Awesome icon for drone -->
+        <div class="tech-item text-center p-3 border rounded shadow">
+          <div class="tech-icon mb-3">
+            <i class="fas fa-helicopter fa-2x"></i>
           </div>
-          <h3 class="tech-heading">Drone Farming</h3>
-          <p>
-            Drones equipped with cameras and sensors to monitor crop health, spray fertilizers, and map fields for precision agriculture.
-          </p>
+          <h4 class="tech-heading">Drone Farming</h4>
+          <p>Drones with sensors monitor crops, spray fertilizers, and assist in precision agriculture.</p>
         </div>
       </div>
       <!-- Tech 3 -->
       <div class="col-lg-3 col-md-6">
-        <div class="tech-item">
-          <div class="tech-icon">
-            <i class="fas fa-seedling"></i> <!-- Font Awesome icon for plants -->
+        <div class="tech-item text-center p-3 border rounded shadow">
+          <div class="tech-icon mb-3">
+            <i class="fas fa-seedling fa-2x"></i>
           </div>
-          <h3 class="tech-heading">Vertical Farming</h3>
-          <p>
-            Innovative farming technique that grows crops in vertically stacked layers, using less space and resources while maximizing yield.
-          </p>
+          <h4 class="tech-heading">Vertical Farming</h4>
+          <p>Growing crops in stacked layers to maximize space and reduce water consumption.</p>
         </div>
       </div>
       <!-- Tech 4 -->
       <div class="col-lg-3 col-md-6">
-        <div class="tech-item">
-          <div class="tech-icon">
-            <i class="fas fa-brain"></i> <!-- Font Awesome icon for AI -->
+        <div class="tech-item text-center p-3 border rounded shadow">
+          <div class="tech-icon mb-3">
+            <i class="fas fa-brain fa-2x"></i>
           </div>
-          <h3 class="tech-heading">AI-Powered Crop Monitoring</h3>
-          <p>
-            Artificial intelligence systems that analyze data from sensors and satellites to predict crop diseases, optimize planting, and improve yields.
-          </p>
+          <h4 class="tech-heading">AI-Powered Crop Monitoring</h4>
+          <p>AI analyzes data to predict diseases, optimize planting, and improve yields.</p>
         </div>
       </div>
       <!-- Tech 5 -->
       <div class="col-lg-3 col-md-6">
-        <div class="tech-item">
-          <div class="tech-icon">
-            <i class="fas fa-water"></i> <!-- Font Awesome icon for hydroponics -->
+        <div class="tech-item text-center p-3 border rounded shadow">
+          <div class="tech-icon mb-3">
+            <i class="fas fa-water fa-2x"></i>
           </div>
-          <h3 class="tech-heading">Hydroponics</h3>
-          <p>
-            Soil-less farming method that grows plants in nutrient-rich water, reducing water usage and allowing farming in urban areas.
-          </p>
+          <h4 class="tech-heading">Hydroponics</h4>
+          <p>Soil-less farming method using nutrient-rich water, perfect for urban agriculture.</p>
         </div>
       </div>
       <!-- Tech 6 -->
       <div class="col-lg-3 col-md-6">
-        <div class="tech-item">
-          <div class="tech-icon">
-            <i class="fas fa-link"></i> <!-- Font Awesome icon for blockchain -->
+        <div class="tech-item text-center p-3 border rounded shadow">
+          <div class="tech-icon mb-3">
+            <i class="fas fa-link fa-2x"></i>
           </div>
-          <h3 class="tech-heading">Blockchain for Supply Chain</h3>
-          <p>
-            Blockchain technology used to track and verify the origin of agricultural products, ensuring transparency and food safety.
-          </p>
+          <h4 class="tech-heading">Blockchain for Supply Chain</h4>
+          <p>Tracks and verifies agricultural products for transparency and food safety.</p>
         </div>
       </div>
       <!-- Tech 7 -->
       <div class="col-lg-3 col-md-6">
-        <div class="tech-item">
-          <div class="tech-icon">
-            <i class="fas fa-robot"></i> <!-- Font Awesome icon for robots -->
+        <div class="tech-item text-center p-3 border rounded shadow">
+          <div class="tech-icon mb-3">
+            <i class="fas fa-robot fa-2x"></i>
           </div>
-          <h3 class="tech-heading">Robotic Harvesting</h3>
-          <p>
-            Robots designed to harvest crops efficiently, reducing labor costs and minimizing damage to plants during the harvesting process.
-          </p>
+          <h4 class="tech-heading">Robotic Harvesting</h4>
+          <p>Robots efficiently harvest crops, reducing labor costs and plant damage.</p>
         </div>
       </div>
       <!-- Tech 8 -->
       <div class="col-lg-3 col-md-6">
-        <div class="tech-item">
-          <div class="tech-icon">
-            <i class="fas fa-wifi"></i> <!-- Font Awesome icon for IoT -->
+        <div class="tech-item text-center p-3 border rounded shadow">
+          <div class="tech-icon mb-3">
+            <i class="fas fa-wifi fa-2x"></i>
           </div>
-          <h3 class="tech-heading">IoT in Agriculture</h3>
-          <p>
-            Internet of Things (IoT) devices that collect real-time data on soil moisture, temperature, and humidity to optimize farming practices.
-          </p>
+          <h4 class="tech-heading">IoT in Agriculture</h4>
+          <p>IoT devices monitor soil moisture, temperature, and humidity for better farming.</p>
         </div>
       </div>
     </div>
   </div>
-</section><!-- /New Technology Grid Section -->
+</section>
 
 
 

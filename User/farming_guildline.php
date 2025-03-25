@@ -83,29 +83,35 @@
                 </div>
             </div>
         </div>
-        <!-- Additional Resources Section -->
-        <section class="bg-white rounded-lg shadow-md p-8 mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Additional Resources</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-4 border border-gray-200 rounded-lg">
-                    <i class="bi bi-file-pdf text-red-500 text-2xl mb-3"></i>
-                    <h3 class="font-semibold mb-2">Downloadable Guides</h3>
-                    <p class="text-gray-600">Access comprehensive PDF guides for offline reference.</p>
-                </div>
-                
-                <div class="p-4 border border-gray-200 rounded-lg">
-                    <i class="bi bi-camera-video text-blue-500 text-2xl mb-3"></i>
-                    <h3 class="font-semibold mb-2">Video Tutorials</h3>
-                    <p class="text-gray-600">Watch step-by-step video guides on farming techniques.</p>
-                </div>
-                
-                <div class="p-4 border border-gray-200 rounded-lg">
-                    <i class="bi bi-people text-green-500 text-2xl mb-3"></i>
-                    <h3 class="font-semibold mb-2">Expert Consultation</h3>
-                    <p class="text-gray-600">Connect with agricultural experts for personalized advice.</p>
-                </div>
-            </div>
-        </section>
+       <!-- Additional Resources Section -->
+<section class="bg-white rounded-lg shadow-md p-8 mb-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Additional Resources</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+        
+        <div class="p-4 border border-gray-200 rounded-lg text-center">
+            <i class="bi bi-file-pdf text-red-500 text-2xl mb-3"></i>
+            <h3 class="font-semibold mb-2">Downloadable Guides</h3>
+            <p class="text-gray-600 mb-3">Access comprehensive PDF guides for offline reference.</p>
+            <a href="guides.html" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">View Guides</a>
+        </div>
+        
+        <div class="p-4 border border-gray-200 rounded-lg text-center">
+            <i class="bi bi-camera-video text-blue-500 text-2xl mb-3"></i>
+            <h3 class="font-semibold mb-2">Video Tutorials</h3>
+            <p class="text-gray-600 mb-3">Watch step-by-step video guides on farming techniques.</p>
+            <a href="./view_videos.php" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Watch Videos</a>
+        </div>
+        
+        <div class="p-4 border border-gray-200 rounded-lg text-center">
+            <i class="bi bi-people text-green-500 text-2xl mb-3"></i>
+            <h3 class="font-semibold mb-2">Expert Consultation</h3>
+            <p class="text-gray-600 mb-3">Connect with agricultural experts for personalized advice.</p>
+            <a href="experts.html" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">Consult Experts</a>
+        </div>
+
+    </div>
+</section>
+
 
         <!-- Call to Action -->
         <section class="bg-green-100 rounded-lg p-8 text-center">

@@ -549,7 +549,7 @@
     <?php include '../admin/admin_header.php'; ?>
     <!-- Content Area -->
     <div class="content">
-        <h1 class="page-title"><i class="fas fa-seedling"></i> Agriculture Department Dashboard</h1>
+      
         
         <!-- Stat Cards -->
         <div class="dashboard-cards">
@@ -836,5 +836,9 @@
             }
         });
     </script>
+    
+    <footer class="w-full bg-white text-center p-4 mt-6">
+        <p class="text-gray-600">&copy; <?php echo date("Y"); ?> Agriculture Hub. All rights reserved.</p>
+    </footer>
 </body>
 </html>

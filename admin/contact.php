@@ -106,7 +106,7 @@ if (isset($_POST["reply_submit"])) {
     </style>
 </head>
 <body>
-    <h2>User Queries</h2>
+    <h2> Manage User Queries</h2>
     <table>
         <tr>
             <th>Name</th>

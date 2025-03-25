@@ -84,7 +84,7 @@ $conn->close();
 </head>
 <body class="bg-gray-100 p-6">
     <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
-        <h2 class="text-2xl font-bold text-gray-800 text-center">Add Water Schedule</h2>
+        <h2 class="text-2xl font-bold text-gray-800 text-center">Manage Water Schedule</h2>
 
         <form method="post" class="bg-gray-50 p-4 rounded-lg shadow-md mt-4">
             <label class="block font-medium text-gray-600">Region:</label>

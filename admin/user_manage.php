@@ -140,7 +140,7 @@ if (!$result) {
 </head>
 <body>
 
-    <h1>User List</h1>
+    <h1> Manage User List</h1>
     
     <!-- Table to display users' data -->
     <table>

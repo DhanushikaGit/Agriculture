@@ -183,7 +183,7 @@ if (!$result) {
     </div>
 
     <footer class="w-full bg-white text-center p-4 mt-6">
-        <p class="text-gray-600">&copy; <?php echo date("Y"); ?> The Department of Agriculture Services. All rights reserved.</p>
+        <p class="text-gray-600">&copy; <?php echo date("Y"); ?> Agriculture Hub. All rights reserved.</p>
     </footer>
 
     <!-- AlpineJS for Dropdown Nav -->

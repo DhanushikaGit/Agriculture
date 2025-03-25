@@ -379,7 +379,7 @@ div[id^="details-"]:target {
 <?php include 'chatbot.php'; ?>
     <div class="container mx-auto">
         <h1 class="text-3xl font-bold text-center mb-6">Quick and Useful Tips for Successful Farming</h1>
-        <img src="image.png" class="mx-auto mb-4 rounded-lg shadow-md" alt="Tips for successful farming" width="500">
+        <img src="./assets/img/anuradhapura4.jpg" class="mx-auto mb-4 rounded-lg shadow-md" alt="Tips for successful farming" width="500">
 
         <p class="text-gray-700 text-center mb-6">
             Farming may feel overwhelming at first, especially without proper planning. It's best to start small and learn gradually. 
